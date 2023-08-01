@@ -11,7 +11,6 @@ This repository is a testament to my commitment to learning and growing as a sof
 - **Daily Commits:** See my progress in real time with daily updates.
 - **Comprehensive Coverage:** From basic syntax to advanced concepts in C++, this repository provides a detailed look into my learning process.
 - **DSA Mastery:** Explore a variety of problems covering all major data structures and algorithmic techniques.
-- **Well-Documented Code:** Each solution is well-commented and explained, making it easy for anyone to follow my thought process.
 
 ## Why C++?
 
