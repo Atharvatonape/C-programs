@@ -4,35 +4,28 @@
 #include<vector>
 using namespace std;
 
-int rope(int n, int a, int b, int c, vector<int> par){
-    if(n != 0){
-        if(n-a == 0 || n-b == 0 || n-c == 0 ){
-            par.push_back(a);
-        }
-        else if(n-a != 0){
-            par.push_back(a)
-            rope(n-a, a,b,c,par);
-        }
-        else if(n-b != 0){
-            par.push_back(b)
-            rope(n-b, a,b,c,par);
-        }
-        else if(n-c != 0){
-            par.push_back(c)
-            rope(n-c, a,b,c,par);
-        }
 
-    }    
+int maxCuts(int n, int a, int b, int c)
+{
+	if(n == 0)
+		return 0;
+	if(n <= -1)
+		return -1;
 
+	int res = max(maxCuts(n-a, a, b, c), 
+	          max(maxCuts(n-b, a, b, c), 
+	          maxCuts(n-c, a, b, c)));
+
+	if(res == -1)
+		return -1;
+
+	return res + 1; 
 }
-
-int main(){
-    cout << "Enter the number you want to solve for "<< endl;
-    int n,a,b,c;
-    cin >> n;
-    cout << "Enter the 3 parameters you want "<< endl;
-    vector<int> ans;
-    vector<int> par;
-    ans = rope(n, a , b, c, par);   
-
+int main() {
+	
+	int n = 5, a = 2, b = 1, c = 5;
+	
+	cout<<maxCuts(n, a, b, c);
+	
+	return 0;
 }
