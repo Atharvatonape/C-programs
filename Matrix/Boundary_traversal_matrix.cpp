@@ -5,7 +5,7 @@ using namespace std;
 int main() {
 
     cout << "Welcome to Snake traversal method in MAtrix 12369874";
-    int m=4,n=2;
+    int m=0,n=2;
     cout << "\n\n";
     int arr[m][n];
 //
